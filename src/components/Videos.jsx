@@ -3,7 +3,7 @@ import { Box, Stack } from "@mui/material";
 
 
 //---- accepting the videos as props
-const Videos = ({ videoData ,direction }) => {
+const Videos = ({ videoData, direction }) => {
   console.log(videoData);
   // return (
   //   <>
@@ -22,9 +22,10 @@ const Videos = ({ videoData ,direction }) => {
 
   return (
     <Stack bgcolor="" direction={direction || "row"} flexWrap="wrap" justifyContent="center" alignItems="start" gap={2}>
+
       {videoData.map((item, idx) => (
         <Box key={idx}>
-          {item.id.videoId && <VideoCard video={item} /> }
+          {item.id.videoId && <VideoCard video={item} />}
           {item.id.channelId && <ChannelCard channelDetail={item} />}
         </Box>
       ))}
